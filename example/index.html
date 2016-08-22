@@ -1,0 +1,20 @@
+<script src="../node_modules/vue/dist/vue.min.js"></script>
+<script src="../dist/index.js"></script>
+<div id="app"></div>
+
+<script>
+
+  var data = {caption: 'first title'}
+  new Vue ({
+    components: {'document-title':VueDocumentTitle},
+    el: '#app',
+    data () {
+      return data
+    },
+    template:'<document-title :title="title">haha</document-title>'
+  })
+
+  setTimeout(function () {
+    data.caption = 'next title'
+  }, 2000)
+</script>
