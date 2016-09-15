@@ -25,6 +25,6 @@ export default {
       }
   },
   render (h) {
-      h(this.$slots.default)
+      return h('div', this.$slots.default)
   }
 }
